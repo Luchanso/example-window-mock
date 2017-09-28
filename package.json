@@ -8,7 +8,8 @@
     "eslint-config-airbnb-base": "^11.1.1",
     "eslint-plugin-import": "^2.2.0",
     "jest": "^19.0.2",
-    "socket.io": "^1.7.3"
+    "socket.io": "^2.0.2",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "eslint": "^3.17.0",
@@ -18,9 +19,12 @@
     "window-mock": "0.0.13"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "Loutchansky Oleg <luchansodev@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
